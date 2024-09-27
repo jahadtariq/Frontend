@@ -15,6 +15,23 @@ const Dashboard: React.FC = () => {
   return (
     <Layout pageTitle="Home" pageSubTitle="View All Current Pumps">
       <div className="text-white font-Montserrat">
+
+        <div className='flex items-center justify-center'>
+          <div className='flex flex-col gap-4 items-center justify-center mb-10 w-[40%]'>
+            <h1 className='text-[40px] text-yellow-500 shadow-red-500 text-shadow-[0_4px_8px_var(--tw-shadow-color)] font-Anton tracking-wider uppercase'>King of the Hill</h1>
+            <PumpCard
+              ticker='$MOODOGG'
+              name="Moo Dogg"
+              description='Tiny Dog, Big Drama: Meet Moo Dogg, our tiny, white Chihuahua known for her dramatic and adorable crying face'
+              image='https://via.placeholder.com/40'
+              marketcap={1080456}
+              replies={47}
+              time='1h ago'
+              link='/'
+            />
+          </div>
+        </div>
+
         {/* Add your dashboard content here */}
         <div className='flex gap-4 justify-start items-center mb-10'>
           <DropdownSort/>

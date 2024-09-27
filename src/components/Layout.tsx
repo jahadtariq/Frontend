@@ -10,7 +10,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, pageTitle, pageSubTitle }) => {
   return (
-    <div className="flex h-screen w-full">
+    <div className="flex h-full w-full">
       {/* Sidebar */}
       <Sidebar />
 
@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children, pageTitle, pageSubTitle }) =>
         <Header title={pageTitle} subtitle={pageSubTitle}/>
 
         {/* Main content */}
-        <div className="p-4 flex-grow">{children}</div>
+        <div className="py-4 px-8 flex-grow">{children}</div>
       </div>
     </div>
   );

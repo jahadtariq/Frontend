@@ -9,7 +9,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   return (
-    <div className="header font-Montserrat bg-dark text-white px-4 py-2 flex justify-between items-center pt-4 mb-10">
+    <div className="header font-Montserrat bg-dark text-white px-8 py-2 flex justify-between items-center pt-4 mb-10">
       <div className='flex flex-col gap-1'>
         <h1 className='text-[32px]'>{title}</h1>
         <h1 className='text-[14px] text-[#909093]'>{subtitle}</h1>

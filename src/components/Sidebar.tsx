@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
 
 
   return (
-    <div className="sidebar bg-[#132d46] text-white min-w-56 h-screen flex flex-col justify-between px-4 py-8 shadow-3xl shadow-[#49e9dd] border-r-2 border-[#1b5a71] font-Montserrat">
+    <div className="sidebar bg-[#132d46] text-white min-w-56 min-h-screen flex flex-col justify-between px-4 py-8 shadow-3xl shadow-[#49e9dd] border-r-2 border-[#1b5a71] font-Montserrat">
       {/* Top section - Logo and company name */}
       <div className='flex gap-1 items-center'>
         <img src={logo} alt='' className='w-16 h-16'/>
@@ -27,7 +27,7 @@ const Sidebar: React.FC = () => {
       <div className='font-Montserrat text-[16px]'>
         <ul className="space-y-8">
           <li><Link to="/dashboard" className={getLinkClass('/dashboard')}>Home</Link></li>
-          <li><Link to="/coin" className={getLinkClass('/coin')}>Start a New Coin</Link></li>
+          <li><Link to="/new-coin" className={getLinkClass('/new-coin')}>Start a New Coin</Link></li>
           <li><Link to="/portfolio" className={getLinkClass('/portfolio')}>Twitter</Link></li>
           <li><Link to="/trading" className={getLinkClass('/trading')}>Support</Link></li>
           <li><Link to="/watchlist" className={getLinkClass('/watchlist')}>Telegram</Link></li>
@@ -45,7 +45,7 @@ const Sidebar: React.FC = () => {
         <div className="flex items-center justify-start">
           <button className="flex items-center justify-center space-x-2">
             <FaSignOutAlt />
-            <span>Logout</span>
+            <span>Logout Wallet</span>
           </button>
         </div>
       </div>

@@ -14,7 +14,7 @@ interface PumpCardProps{
 
 const PumpCard: React.FC<PumpCardProps> = ({ticker,name,description,image,link,time,marketcap,replies}) => {
   return (
-    <Link to={link} className="bg-[#1b5a71] p-4 rounded-md text-white">
+    <Link to={link} className="bg-[#1b5a71] p-4 rounded-md text-white font-Montserrat">
       <div className="flex gap-4">
         <img
           src={image}
