@@ -18,7 +18,7 @@ const Sidebar: React.FC = () => {
 
 
   return (
-    <div className="sidebar bg-[#132d46] text-white w-56 h-screen flex flex-col justify-between px-4 py-8 shadow-3xl shadow-[#49e9dd] border-r-2 border-[#1b5a71]">
+    <div className="sidebar bg-[#132d46] text-white min-w-56 h-screen flex flex-col justify-between px-4 py-8 shadow-3xl shadow-[#49e9dd] border-r-2 border-[#1b5a71] font-Montserrat">
       {/* Top section - Logo and company name */}
       <div className='flex gap-1 items-center'>
         <img src={logo} alt='' className='w-16 h-16'/>

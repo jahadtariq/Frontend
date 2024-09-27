@@ -1,11 +1,70 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Layout from '../components/Layout';
+import DropdownSort from "../components/sortButton";
+
+import { RxCross2 } from "react-icons/rx";
+import {FaCheck } from "react-icons/fa";
+
+import PumpCard from '../components/PumpCard';
 
 const Dashboard: React.FC = () => {
+
+  const [toggleAnimations, setToggleAnimations] = useState(false);
+  const [toggleNSFW, setToggleNSFW] = useState(false);
+
   return (
     <Layout pageTitle="Home" pageSubTitle="View All Current Pumps">
-      <div className="text-white">
+      <div className="text-white font-Montserrat">
         {/* Add your dashboard content here */}
+        <div className='flex gap-4 justify-start items-center mb-10'>
+          <DropdownSort/>
+          <div className={`${toggleAnimations ? 'bg-green-300 hover:bg-green-400' : 'bg-red-300 hover:bg-red-400'} inline-flex justify-between items-center rounded-md px-4 py-2 text-sm font-medium text-black shadow-sm focus:outline-none gap-2 hover:cursor-pointer`} onClick={() => setToggleAnimations(!toggleAnimations)}>
+            {
+              toggleAnimations ? <FaCheck /> : <RxCross2  />
+            }
+            <p>Animations</p>
+          </div>
+          <div className={`${toggleNSFW ? 'bg-green-300 hover:bg-green-400' : 'bg-red-300 hover:bg-red-400'} inline-flex justify-between items-center rounded-md px-4 py-2 text-sm font-medium text-black shadow-sm focus:outline-none gap-2 hover:cursor-pointer`} onClick={() => setToggleNSFW(!toggleNSFW)}>
+            {
+              toggleNSFW ? <FaCheck /> : <RxCross2  />
+            }
+            <p>Include NSFW</p>
+          </div>
+        </div>
+
+        <div className='grid grid-cols-3 gap-4'>
+          <PumpCard
+            ticker='$MOODOGG'
+            name="Moo Dogg"
+            description='Tiny Dog, Big Drama: Meet Moo Dogg, our tiny, white Chihuahua known for her dramatic and adorable crying face'
+            image='https://via.placeholder.com/40'
+            marketcap={1080456}
+            replies={47}
+            time='1h ago'
+            link='/'
+          />
+          <PumpCard
+            ticker='$MOODOGG'
+            name="Moo Dogg"
+            description='Tiny Dog, Big Drama: Meet Moo Dogg, our tiny, white Chihuahua known for her dramatic and adorable crying face'
+            image='https://via.placeholder.com/40'
+            marketcap={1080456}
+            replies={47}
+            time='1h ago'
+            link='/'
+          />
+          <PumpCard
+            ticker='$MOODOGG'
+            name="Moo Dogg"
+            description='Tiny Dog, Big Drama: Meet Moo Dogg, our tiny, white Chihuahua known for her dramatic and adorable crying face'
+            image='https://via.placeholder.com/40'
+            marketcap={1080456}
+            replies={47}
+            time='1h ago'
+            link='/'
+          />
+        </div>
+      
       </div>
     </Layout>
   );

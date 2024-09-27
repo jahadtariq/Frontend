@@ -10,12 +10,12 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, pageTitle, pageSubTitle }) => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen w-full">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main content area */}
-      <div className="flex flex-col flex-grow bg-gray-900">
+      <div className="flex flex-col bg-gray-900 w-full">
         {/* Page header */}
         <Header title={pageTitle} subtitle={pageSubTitle}/>
 
