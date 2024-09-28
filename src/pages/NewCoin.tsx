@@ -12,7 +12,7 @@ const NewCoin = () => {
 
   return (
     <Layout pageTitle="New Coin" pageSubTitle="List your new coin for pump">
-         <div className="max-w-md mx-auto bg-[#132d46]/40 text-white p-6 rounded-md font-Montserrat">
+         <div className="max-w-md mx-auto bg-[#132d46]/40 text-white p-6 rounded-md font-Montserrat mb-6">
       <form>
         <div className="mb-4">
           <label className="block mb-2 text-sm" htmlFor="name">Name</label>

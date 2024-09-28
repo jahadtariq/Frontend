@@ -104,18 +104,18 @@ const PumpCoin = () => {
 
   return (
     <Layout pageTitle="Pump Details" pageSubTitle="View And Trade The current Coin Pump">
-    <div className="min-h-screen font-Montserrat text-white w-full flex ">
+    <div className="min-h-screen font-Montserrat text-white w-full lg:flex ">
             {/* Left Section: Chart */}
-      <div className="w-3/4 p-4">
+      <div className="w-full lg:w-3/4 md:p-4">
         {/* Chart Header */}
-        <div className="flex justify-between items-center mb-4">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-4 md:gap-0 md:items-center mb-4">
           <div>
             <h1 className="text-xl font-bold">IAMHIM</h1>
             <p className="text-sm">Ticker: HIM</p>
           </div>
           <div>
             <p className="text-green-400">Market cap: $10,394.418</p>
-            <p className="flex gap-2 items-center"><span><FaCopy /></span>CA :  
+            <p className="flex gap-2 items-center flex-wrap"><span><FaCopy /></span>CA :  
                 <span 
                     className="text-green-500 hover:cursor-pointer"
                     onClick={() => copyToClipboard('GmEUVQ1tLGxkJ8EsmfaCeg...')}
@@ -143,8 +143,8 @@ const PumpCoin = () => {
             {displayType === "Comments" ? 
                 <>
                     {comments.map((comment)=>(
-                        <div className="flex flex-col h-contain w-full p-4 bg-[#1b5a71]/50 rounded-lg">
-                            <div className="flex flex-row w-full gap-8 items-center text-[12px]">
+                        <div className="flex flex-col h-contain w-full p-2 md:p-4 bg-[#1b5a71]/50 rounded-lg">
+                            <div className="flex flex-row w-full gap-2 md:gap-8 items-center text-[12px]">
                                 <div className="flex items-center justify-center gap-2">
                                 <img
                                     src="https://via.placeholder.com/40"
@@ -218,7 +218,7 @@ const PumpCoin = () => {
       </div>
 
       {/* Right Section: Transaction Panel */}
-      <div className="w-1/4 h-contain flex flex-col gap-4">
+      <div className="w-full lg:w-1/4 h-contain flex flex-col gap-4 md:p-4 mt-6 md:mt-0">
 
         <div className="h-[600px] bg-[#1e293b] px-4 py-8 rounded-l-md flex flex-col justify-between">
             {/* Buy/Sell Panel */}

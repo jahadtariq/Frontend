@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
   return (
     <div className="header font-Montserrat bg-dark text-white px-8 py-2 flex justify-between items-center pt-4 mb-10">
-      <div className='flex flex-col gap-1'>
+      <div className='hidden md:flex flex-col gap-1'>
         <h1 className='text-[32px]'>{title}</h1>
         <h1 className='text-[14px] text-[#909093]'>{subtitle}</h1>
       </div>
@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
         <div className='bg-[#1b5a71]/30 rounded-3xl p-2 items-center justify-center'>
           <CiBellOn className='w-6 h-6'/>
         </div>
-        <div className='flex items-center'>
+        <div className='hidden md:flex items-center'>
           <div className="flex items-center space-x-2">
             <img
               src="https://via.placeholder.com/40"

@@ -17,7 +17,7 @@ const Dashboard: React.FC = () => {
       <div className="text-white font-Montserrat">
 
         <div className='flex items-center justify-center'>
-          <div className='flex flex-col gap-4 items-center justify-center mb-10 w-[40%]'>
+          <div className='flex flex-col gap-4 items-center justify-center mb-10 md:w-[40%]'>
             <h1 className='text-[40px] text-yellow-500 shadow-red-500 text-shadow-[0_4px_8px_var(--tw-shadow-color)] font-Anton tracking-wider uppercase'>King of the Hill</h1>
             <PumpCard
               ticker='$MOODOGG'
@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
         </div>
 
         {/* Add your dashboard content here */}
-        <div className='flex gap-4 justify-start items-center mb-10'>
+        <div className='flex flex-wrap gap-4 justify-start items-center mb-10'>
           <DropdownSort/>
           <div className={`${toggleAnimations ? 'bg-green-300 hover:bg-green-400' : 'bg-red-300 hover:bg-red-400'} inline-flex justify-between items-center rounded-md px-4 py-2 text-sm font-medium text-black shadow-sm focus:outline-none gap-2 hover:cursor-pointer`} onClick={() => setToggleAnimations(!toggleAnimations)}>
             {
@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
           <PumpCard
             ticker='$MOODOGG'
             name="Moo Dogg"

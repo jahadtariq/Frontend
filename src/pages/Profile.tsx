@@ -96,7 +96,7 @@ const Profile = () => {
 
   return (
     <Layout pageTitle="Profile" pageSubTitle="View And Edit Your Profile">
-        <div className="bg-gray-900 text-white min-h-screen p-8">
+        <div className="bg-gray-900 text-white min-h-screen md:p-8">
         {/* Profile Info Section */}
         <div className="flex items-center mb-4">
             <img
@@ -131,8 +131,8 @@ const Profile = () => {
         </div>
 
         {/* Public Address Section */}
-        <div className="mb-4 w-[40%]">
-          <div className="bg-gray-800 px-4 py-2 rounded-md text-sm mb-2 flex items-center justify-between">
+        <div className="mb-4 md:max-w-[60%] lg:max-w-[40%]">
+          <div className="bg-gray-800 px-4 py-2 rounded-md text-sm mb-2 flex gap-6 items-center justify-between break-all">
             <p id="user_wallet_address">4Kr86uYXaM87YPX6PGCQttFYp3Se2MzT2FneHSJHUDnJ</p>
             <FaCopy className="w-4 h-4 hover: cursor-pointer" onClick={() => copyToClipboard()}/>
           </div>
@@ -142,7 +142,7 @@ const Profile = () => {
         </div>
 
         {/* Tabs Section */}
-        <div className="flex gap-4 mb-4 text-sm">
+        <div className="flex gap-1 md:gap-4 mb-4 text-[12px] overflow-x-auto whitespace-nowrap">
           <button className={`${activeTab === 'coinsHeld' ? 'bg-[#49e9dd] text-black': 'bg-[#1b5a71]/50 text-white'} px-3 py-1 rounded-md mr-2`} onClick={()=>setActiveTab('coinsHeld')}>coins held</button>
           <button className={`${activeTab === 'coinsCreated' ? 'bg-[#49e9dd] text-black': 'bg-[#1b5a71]/50 text-white'} px-3 py-1 rounded-md mr-2`} onClick={()=>setActiveTab('coinsCreated')}>coins created</button>
           <button className={`${activeTab === 'replies' ? 'bg-[#49e9dd] text-black': 'bg-[#1b5a71]/50 text-white'} px-3 py-1 rounded-md mr-2`} onClick={()=>setActiveTab('replies')}>replies</button>
@@ -154,34 +154,36 @@ const Profile = () => {
         {
           activeTab === 'coinsCreated' && 
           <div className="overflow-x-auto mt-2">
-                    <table className="table-auto w-full text-left text-[14px] text-white font-Montserrat font-regular capitalize">
-                        <thead className="bg-[#1b5a71]/30">
+                    <table className="table-auto w-full text-left text-[14px] md:text-[12px] text-white font-Montserrat font-regular capitalize">
+                      <thead className="bg-[#1b5a71]/30">
                         <tr>
-                            <th className="px-4 py-2">Coin</th>
-                            <th className="px-4 py-2">SOL</th>
-                            <th className="px-4 py-2">Market Cap</th>
-                            <th className="px-4 py-2">Ticker</th>
-                            <th className="px-4 py-2">Comments</th>
-                            <th className="px-4 py-2">Description</th>
-                            <th className="px-4 py-2">Link</th>
+                          <th className="px-4 py-2">Coin</th>
+                          <th className="px-4 py-2 hidden md:table-cell">SOL</th>
+                          <th className="px-4 py-2 hidden lg:table-cell">Market Cap</th>
+                          <th className="px-4 py-2">Ticker</th>
+                          <th className="px-4 py-2 hidden lg:table-cell">Comments</th>
+                          <th className="px-4 py-2 hidden md:table-cell">Description</th>
+                          <th className="px-4 py-2">Link</th>
                         </tr>
-                        </thead>
-                        <tbody>
+                      </thead>
+                      <tbody>
                         {coinsCreated.map((coin, index) => (
-                            <tr key={index} className="bg-[#1b5a71]/10 border-b border-gray-700">
-                            <td className="px-4 py-2 flex items-center gap-4 mt-4">
+                          <tr key={index} className="bg-[#1b5a71]/10 border-b border-gray-700">
+                            <td className="px-4 py-2 flex items-center justify-center gap-4 mt-4">
                               <img src={coin.image} alt="" className="w-12 h-12 rounded-full"/>
                               {coin.name}
                             </td>
-                            <td className="px-4 py-2">{coin.sol}</td>
-                            <td className="px-4 py-2">{coin.marketCap}</td>
+                            <td className="px-4 py-2 hidden md:table-cell">{coin.sol}</td>
+                            <td className="px-4 py-2 hidden lg:table-cell">{coin.marketCap}</td>
                             <td className="px-4 py-2">{coin.ticker}</td>
-                            <td className="px-4 py-2">{coin.replies}</td>
-                            <td className="px-4 py-2 max-w-[400px]">{coin.description}</td>
-                            <td className={`px-4 py-2 hover:underline hover:underline-offset-2`}><Link to={coin.link}>View Coin</Link></td>
-                            </tr>
+                            <td className="px-4 py-2 hidden lg:table-cell">{coin.replies}</td>
+                            <td className="px-4 py-2 hidden md:table-cell max-w-[400px]">{coin.description}</td>
+                            <td className="px-4 py-2 hover:underline hover:underline-offset-2">
+                              <Link to={coin.link}>View Coin</Link>
+                            </td>
+                          </tr>
                         ))}
-                        </tbody>
+                      </tbody>
                     </table>
           </div>
         }
@@ -226,7 +228,7 @@ const Profile = () => {
                         <tbody>
                         {replies.map((reply, index) => (
                             <tr key={index} className="bg-[#1b5a71]/10 border-b border-gray-700">
-                            <td className="px-4 py-2 flex items-center gap-4">
+                            <td className="px-4 py-2 flex items-center justify-center flex-wrap gap-1 md:gap-4 md:flex-nowrap">
                               <img src={reply.userImage} alt="" className="w-12 h-12 rounded-full"/>
                               {reply.username}
                             </td>
