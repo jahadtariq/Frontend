@@ -27,7 +27,7 @@ const Dashboard: React.FC = () => {
               marketcap={1080456}
               replies={47}
               time='1h ago'
-              link='/'
+              link='/coin'
             />
           </div>
         </div>
@@ -58,7 +58,7 @@ const Dashboard: React.FC = () => {
             marketcap={1080456}
             replies={47}
             time='1h ago'
-            link='/'
+            link='/coin'
           />
           <PumpCard
             ticker='$MOODOGG'
@@ -68,7 +68,7 @@ const Dashboard: React.FC = () => {
             marketcap={1080456}
             replies={47}
             time='1h ago'
-            link='/'
+            link='/coin'
           />
           <PumpCard
             ticker='$MOODOGG'
@@ -78,7 +78,7 @@ const Dashboard: React.FC = () => {
             marketcap={1080456}
             replies={47}
             time='1h ago'
-            link='/'
+            link='/coin'
           />
         </div>
       

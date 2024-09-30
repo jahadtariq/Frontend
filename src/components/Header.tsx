@@ -30,9 +30,9 @@ const Header: React.FC<HeaderProps> = ({ title, subtitle }) => {
               alt="User"
               className="rounded-full w-6 h-6"
             />
-            <div className='flex flex-col gap-1 items-start justify-start'>
+            <Link to="/user-profile" className='flex flex-col gap-1 items-start justify-start'>
               <p>Username</p>
-            </div>
+            </Link>
           </div>
         </div>
       </div>
