@@ -9,7 +9,7 @@ import PumpCard from '../components/PumpCard';
 
 const Dashboard: React.FC = () => {
 
-  const [toggleAnimations, setToggleAnimations] = useState(false);
+  const [toggleAnimations, setToggleAnimations] = useState(false);//removed nsfw
  
   return (
     <Layout pageTitle="Home" pageSubTitle="View All Current Pumps">
