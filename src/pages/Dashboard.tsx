@@ -41,12 +41,7 @@ const Dashboard: React.FC = () => {
             }
             <p>Animations</p>
           </div>
-          <div className={`${toggleNSFW ? 'bg-green-300 hover:bg-green-400' : 'bg-red-300 hover:bg-red-400'} inline-flex justify-between items-center rounded-md px-4 py-2 text-sm font-medium text-black shadow-sm focus:outline-none gap-2 hover:cursor-pointer`} onClick={() => setToggleNSFW(!toggleNSFW)}>
-            {
-              toggleNSFW ? <FaCheck /> : <RxCross2  />
-            }
-            <p>Include NSFW</p>
-          </div>
+          
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
