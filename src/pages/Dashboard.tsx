@@ -10,8 +10,7 @@ import PumpCard from '../components/PumpCard';
 const Dashboard: React.FC = () => {
 
   const [toggleAnimations, setToggleAnimations] = useState(false);
-  const [toggleNSFW, setToggleNSFW] = useState(false);
-
+ 
   return (
     <Layout pageTitle="Home" pageSubTitle="View All Current Pumps">
       <div className="text-white font-Montserrat">
